@@ -42,15 +42,19 @@ class _page_State extends State<page_> {
 
   Future<void> select_login() async {
     print("------deviceId-----");
-
+    await select_tbl_pass_app();
+    token_3=list_tbl_pass_app[0]['pass'].toString();
+    print("------token_3-----");
+    print(token_3);
+    print("------token_3-----");
     Timer(Duration(seconds: 3), () async {
       print(deviceId);
       String dvic = deviceId!;
       print("------deviceId4444-----");
       await select_uda();
-      await select_tbl_pass_app();
+
       if (list_user.isNotEmpty) {
-        token_3=list_tbl_pass_app[0]['token_shapify'].toString();
+
         user_id = list_user[0]['id_user'].toString();
         Get.off(frm_learn());
       } else {

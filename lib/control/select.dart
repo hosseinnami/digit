@@ -104,6 +104,7 @@ Future<void> select_tbl_link_card(code_card) async {
 Future<void> select_tbl_pass_app() async {
   list_tbl_pass_app.clear();
   final response = await http.get(Uri.parse('https://$address_ip:$port_/select/tbl_pass_app'));
+  print(response);
 
   if (response.statusCode == 200) {
     final jsonData = jsonDecode(response.body) as List<dynamic>;
@@ -111,6 +112,7 @@ Future<void> select_tbl_pass_app() async {
   } else {
     throw Exception('Failed to load data');
   }
+ // print(list_tbl_pass_app);
 }
 
 Future<void> select_tbl_card_user_id_titr(title) async {

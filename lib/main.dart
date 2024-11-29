@@ -13,11 +13,11 @@ Future<void> main() async {
 
   runApp(ResponsiveTextWidget());
   getdeviceId();
-  await dotenv.load();
-  String? shopifyToken = dotenv.env['SHOPIFY_ACCESS_TOKEN'];
-  String? githubToken = dotenv.env['GITHUB_PERSONAL_ACCESS_TOKEN'];
+  // await dotenv.load();
+  // String? shopifyToken = dotenv.env['SHOPIFY_ACCESS_TOKEN'];
+  // String? githubToken = dotenv.env['GITHUB_PERSONAL_ACCESS_TOKEN'];
 
-  print(shopifyToken); // تست خروجی
+  // print(shopifyToken); // تست خروجی
 }
 
 class ResponsiveTextWidget extends StatelessWidget {
