@@ -51,8 +51,8 @@ class _PageViewDemoState extends State<my_card> {
     // TODO: implement initState
     super.initState();
     page_navig = 0;
-    //  first_();
-    //create_list_card();
+    id_card_select = list_card[0]['id_card'].toString();
+    print(id_card_select);
   }
 
   Future<void> first_() async {
@@ -218,8 +218,8 @@ class _PageViewDemoState extends State<my_card> {
                             dialog_1(context, DialogType.warning, () {
                     
                               //Navigator.pop(context);
-                            }, "UPGRADE", "Define a new profile to use the services of this card..", true,
-                                Colors.orangeAccent, "Upgrade Now");
+                            }, "Warning", "Define a new profile to use the services of this card..", true,
+                                Colors.orangeAccent, "Close");
                           }
                       },
                       child: card_sade2(
@@ -312,8 +312,8 @@ class _PageViewDemoState extends State<my_card> {
                         dialog_1(context, DialogType.warning, () {
 
                           //Navigator.pop(context);
-                        }, "UPGRADE", "Define a new profile to use the services of this card..", true,
-                            Colors.orangeAccent, "Upgrade Now");
+                        }, "Warning", "Define a new profile to use the services of this card..", true,
+                            Colors.orangeAccent, "Close");
                       }
                     },
                     child: card_sade2(
@@ -374,8 +374,8 @@ class _PageViewDemoState extends State<my_card> {
                             dialog_1(context, DialogType.warning, () {
 
                               //Navigator.pop(context);
-                            }, "UPGRADE", "Define a new profile to use the services of this card..", true,
-                                Colors.orangeAccent, "Upgrade Now");
+                            }, "Warning", "Define a new profile to use the services of this card..", true,
+                                Colors.orangeAccent, "Close");
                           }
                         },
                         child: Column(
@@ -500,8 +500,8 @@ class _PageViewDemoState extends State<my_card> {
                             dialog_1(context, DialogType.warning, () {
 
                               //Navigator.pop(context);
-                            }, "UPGRADE", "Define a new profile to use the services of this card..", true,
-                                Colors.orangeAccent, "Upgrade Now");
+                            }, "Warning", "Define a new profile to use the services of this card..", true,
+                                Colors.orangeAccent, "Close");
                           }
                         },
                         child: Column(
@@ -646,8 +646,8 @@ class _PageViewDemoState extends State<my_card> {
                             dialog_1(context, DialogType.warning, () {
 
                               //Navigator.pop(context);
-                            }, "UPGRADE", "Define a new profile to use the services of this card..", true,
-                                Colors.orangeAccent, "Upgrade Now");
+                            }, "Warning", "Define a new profile to use the services of this card..", true,
+                                Colors.orangeAccent, "Close");
                           }
                         },
                         child: Column(

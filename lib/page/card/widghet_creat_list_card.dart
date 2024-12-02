@@ -2,6 +2,7 @@ import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:digicapp/control/val/val_list.dart';
 import 'package:digicapp/page/card/frm_my_card_me.dart';
 import 'package:digicapp/page/card/page_my_card.dart';
+import 'package:digicapp/widget/btn_nav.dart';
 import 'package:digicapp/widget/dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gallery_3d/gallery3d.dart';
@@ -84,6 +85,7 @@ class _widghet_creat_list_cardState extends State<widghet_creat_list_card> {
   void initState() {
     // TODO: implement initState
     super.initState();
+
     _initCardList();
   }
 
@@ -132,8 +134,14 @@ class _widghet_creat_list_cardState extends State<widghet_creat_list_card> {
           },
           itemConfig: const GalleryItemConfig(width: 300, height: 200, radius: 20, isShowTransformMask: false),
           onClickItem: (index) async {
+
+
             // بررسی اینکه اندیس معتبر است و list_card_select حداقل یک عنصر دارد
             if (index >= 0 && index < list_card.length) {
+
+              await select_tbl_card_id_card(id_card_select);
+              await select_tbl_link_card(list_card_select[0]['card_code'].toString());
+
               no_card=true;
               Get.to(my_card_me(name_card: [
                 list_card_select[0]['card_title']?.toString() ?? '',
@@ -154,8 +162,8 @@ class _widghet_creat_list_cardState extends State<widghet_creat_list_card> {
               dialog_1(context, DialogType.warning, () {
 
                 //Navigator.pop(context);
-              }, "UPGRADE", "Define a new profile to use the services of this card..", true,
-                  Colors.orangeAccent, "Upgrade Now");
+              }, "Warning", "Define a new profile to use the services of this card..", true,
+                  Colors.orangeAccent, "Close");
             }
           },
 

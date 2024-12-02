@@ -257,7 +257,7 @@ class _my_menuState extends State<my_menu> {
                 padding: const EdgeInsets.all(8.0),
                 child: Align(
                   alignment: Alignment.center,
-                  child: Text("Version 1.0.9",
+                  child: Text("Version 1.0.11",
                       style: GoogleFonts.bonaNova(
                         textStyle: Theme.of(context).textTheme.displayLarge,
                         color: Colors.white,

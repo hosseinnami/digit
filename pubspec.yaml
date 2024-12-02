@@ -16,7 +16,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.0.1+10
+version: 1.0.1+11
 
 environment:
   sdk: ^3.5.4
@@ -34,12 +34,12 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
+
   cupertino_icons: ^1.0.8
   flutter_svg: ^2.0.10+1
   get_it: ^8.0.2
   rflutter_alert: ^2.0.7
   flutter_advanced_switch: ^3.1.0
-  #lite_rolling_switch: ^1.0.0
   flutter_flip_card: ^0.0.5
   o_color_picker: ^1.0.2
   qr_flutter: ^4.1.0
@@ -69,9 +69,7 @@ dependencies:
   phone_input: ^1.0.0
   pretty_qr_code: ^3.3.0
   share_plus: ^10.1.1
-  #qr_code_scanner: ^1.0.1
   nfc_manager: ^3.5.0
-  #google_ml_kit: ^0.7.0
   animated_custom_dropdown: ^3.1.1
   flutter_launcher_icons: ^0.14.1
   google_maps_flutter_ios: ^2.2.1
@@ -80,8 +78,6 @@ dependencies:
   webview_flutter_android: ^3.16.7
   easy_web_view: ^2.0.2
   email_otp: ^2.1.1
-  #icons_launcher: ^3.0.0
-  #qr_code_scanner: ^1.0.1
   qr_code_scanner_plus: ^2.0.6
   flutter_dotenv: ^5.2.1
 

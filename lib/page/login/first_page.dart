@@ -124,6 +124,9 @@ class _page_State extends State<page_> {
                 fontWeight: FontWeight.w400,
                 fontStyle: FontStyle.normal,
               )),
+          SizedBox(
+            height: 10,
+          ),
         ],
       ),
     );

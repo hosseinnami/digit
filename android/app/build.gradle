@@ -49,8 +49,8 @@ android {
         applicationId = "com.Massive_Dynamic_Technologies_INC.digica"
         minSdk = 21
         targetSdk = 34
-        versionCode 10  // Incremented to 10
-        versionName "1.0.1+10"  // Updated to reflect new version
+        versionCode 11  // Incremented to 10
+        versionName "1.0.1+11"  // Updated to reflect new version
     }
 
     buildTypes {

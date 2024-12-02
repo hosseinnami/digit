@@ -195,134 +195,146 @@ class _new_cardState extends State<qr_code> {
           ],
         ),
         Stack(
-          alignment: AlignmentDirectional.center,
+          alignment: AlignmentDirectional.bottomCenter,
           children: [
             Stack(
-              alignment: AlignmentDirectional.topStart,
-              children: [
-                Image.network(
-                  height: size_panel,
-                  width: with_screen,
-                  "https://$address_ip/digic_pic/user/share/DIGICA_icons/Profile_Background/Digital_Card.png",
-                  fit: BoxFit.cover,
-                  errorBuilder: (context, error, stackTrace) {
-                    return Image.network("https://$address_ip/assets/assets/images/25.png", width: 70, height: 70, fit: BoxFit.fitWidth);
-                  },
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.network(
-                    height: 35,
-                    width: 150,
-                    "https://$address_ip/digic_pic/user/share/DIGICA_icons/Profile_Background/Profile_Digicapp.png",
-                    fit: BoxFit.cover,
-                    errorBuilder: (context, error, stackTrace) {
-                      return Image.network("https://$address_ip/assets/assets/images/25.png", width: 70, height: 70, fit: BoxFit.fitWidth);
-                    },
-                  ),
-                ),
-              ],
-            ),
-            Column(
+              alignment: AlignmentDirectional.center,
               children: [
                 Stack(
-
-                  alignment: AlignmentDirectional.center,
+                  alignment: AlignmentDirectional.topStart,
                   children: [
+                    Image.network(
+                      height: size_panel,
+                      width: with_screen,
+                      "https://$address_ip/digic_pic/user/share/DIGICA_icons/Profile_Background/Digital_Card.png",
+                      fit: BoxFit.cover,
+                      errorBuilder: (context, error, stackTrace) {
+                        return Image.network("https://$address_ip/assets/assets/images/25.png", width: 70, height: 70, fit: BoxFit.fitWidth);
+                      },
+                    ),
                     Padding(
-                      padding: const EdgeInsets.all(50.0),
+                      padding: const EdgeInsets.all(8.0),
                       child: Image.network(
-                        height: 300,
-                        width: 300,
-                        "https://$address_ip/digic_pic/user/share/DIGICA_icons/qr/QR_Frame.png",
-                        fit: BoxFit.fill,
+                        height: 35,
+                        width: 150,
+                        "https://$address_ip/digic_pic/user/share/DIGICA_icons/Profile_Background/Profile_Digicapp.png",
+                        fit: BoxFit.cover,
                         errorBuilder: (context, error, stackTrace) {
                           return Image.network("https://$address_ip/assets/assets/images/25.png", width: 70, height: 70, fit: BoxFit.fitWidth);
                         },
                       ),
                     ),
-                    Center(
-                      child: StreamBuilder(
-                        //Error number 2
-                        stream: NumberCreator().stream,
-                        builder: (context, snapshot) {
-                          if (snapshot.connectionState == ConnectionState.waiting) {
-                            return const Center(child: CircularProgressIndicator());
-                          } else if (snapshot.connectionState == ConnectionState.done) {
-                            return const Text('done');
-                          } else if (snapshot.hasError) {
-                            return const Text('Error!');
-                          } else {
-                            return Container(
-                              width: 240,
-                              height: 240,
-                              decoration: BoxDecoration(
-                                borderRadius: const BorderRadius.all(Radius.circular(40.0)),
-                                // color: Colors.grey,
-                              ),
-                              child: Center(
-                                child: StreamBuilder(
-                                    //Error number 2
-                                    stream: NumberCreator().stream,
-                                    builder: (context, snapshot) {
-                                      // if (type_shape) {
-                                      //   Shape_real = PrettyQrSmoothSymbol(
-                                      //     color: selectedColor_qr,
-                                      //     roundFactor: 1,
-                                      //   );
-                                      // } else {
-                                      //   Shape_real = PrettyQrRoundedSymbol(
-                                      //     color: selectedColor_qr,
-                                      //     borderRadius: BorderRadius.all(Radius.circular(round_val_p4)),
-                                      //   );
-                                      // }
-
-                                      return PrettyQrView.data(
-                                        data: widget.val_qr,
-                                        decoration: PrettyQrDecoration(
-                                            // shape: Shape_real,
-                                            // image: PrettyQrDecorationImage(
-                                            //   fit: BoxFit.fill,
-                                            //   padding: EdgeInsets.all(10),
-                                            //  image: loadImageProviderFromUrl(pic_logo_qr),
-                                            // ),
-                                            ),
-                                      );
-                                    }),
-                              ),
-                            );
-                          }
-                        },
-                      ),
-                    ),
                   ],
                 ),
-                Visibility(
-                  visible: visibliti_qr[0],
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 10.0, right: 10, bottom: 10, top: 5),
-                    child: Row(
+                Column(
+                  children: [
+                    Stack(
+
+                      alignment: AlignmentDirectional.center,
                       children: [
-                        Expanded(
-                            child: btn_digica_1(
-                                onPressed: () async {
-                                  Share.share(
-                                    link_qr,
-                                    subject: "Digicapp.com",
-                                  );
-                                },
-                                lbl: "Share")),
+                        Padding(
+                          padding: const EdgeInsets.all(50.0),
+                          child: Image.network(
+                            height: 300,
+                            width: 300,
+                            "https://$address_ip/digic_pic/user/share/DIGICA_icons/qr/QR_Frame.png",
+                            fit: BoxFit.fill,
+                            errorBuilder: (context, error, stackTrace) {
+                              return Image.network("https://$address_ip/assets/assets/images/25.png", width: 70, height: 70, fit: BoxFit.fitWidth);
+                            },
+                          ),
+                        ),
+                        Center(
+                          child: StreamBuilder(
+                            //Error number 2
+                            stream: NumberCreator().stream,
+                            builder: (context, snapshot) {
+                              if (snapshot.connectionState == ConnectionState.waiting) {
+                                return const Center(child: CircularProgressIndicator());
+                              } else if (snapshot.connectionState == ConnectionState.done) {
+                                return const Text('done');
+                              } else if (snapshot.hasError) {
+                                return const Text('Error!');
+                              } else {
+                                return Container(
+                                  width: 240,
+                                  height: 240,
+                                  decoration: BoxDecoration(
+                                    borderRadius: const BorderRadius.all(Radius.circular(40.0)),
+                                    // color: Colors.grey,
+                                  ),
+                                  child: Center(
+                                    child: StreamBuilder(
+                                        //Error number 2
+                                        stream: NumberCreator().stream,
+                                        builder: (context, snapshot) {
+                                          // if (type_shape) {
+                                          //   Shape_real = PrettyQrSmoothSymbol(
+                                          //     color: selectedColor_qr,
+                                          //     roundFactor: 1,
+                                          //   );
+                                          // } else {
+                                          //   Shape_real = PrettyQrRoundedSymbol(
+                                          //     color: selectedColor_qr,
+                                          //     borderRadius: BorderRadius.all(Radius.circular(round_val_p4)),
+                                          //   );
+                                          // }
+
+                                          return PrettyQrView.data(
+                                            data: widget.val_qr,
+                                            decoration: PrettyQrDecoration(
+                                                // shape: Shape_real,
+                                                // image: PrettyQrDecorationImage(
+                                                //   fit: BoxFit.fill,
+                                                //   padding: EdgeInsets.all(10),
+                                                //  image: loadImageProviderFromUrl(pic_logo_qr),
+                                                // ),
+                                                ),
+                                          );
+                                        }),
+                                  ),
+                                );
+                              }
+                            },
+                          ),
+                        ),
                       ],
                     ),
-                  ),
+
+
+                  ],
                 ),
               ],
             ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 12.0),
+              child: Visibility(
+                visible: visibliti_qr[0],
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 10.0, right: 10, bottom: 10, top: 5),
+                  child: Row(
+                    children: [
+                      Expanded(
+                          child: btn_digica_1(
+                              onPressed: () async {
+                                Share.share(
+                                  link_qr,
+                                  subject: "Digicapp.com",
+                                );
+                              },
+                              lbl: "Share")),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+
           ],
         ),
 
 
       ]),
+
     );
   }
 }
